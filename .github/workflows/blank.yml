@@ -1,0 +1,7 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+- name: Yarn Test Action
+  uses: onichandame/node-test-action@0.0.0
