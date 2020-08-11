@@ -1,7 +1,8 @@
 // Interfaces;
 import typeInterface from '../../interfaces/type.interface';
+import modelInterface from '../../interfaces/model.interface';
 
-export default abstract class ModelBase<T = Object> {
+export default abstract class ModelBase<T = Object> implements modelInterface<T> {
   // -------------------------------------------------
   // Properties
   // -------------------------------------------------

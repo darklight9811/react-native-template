@@ -6,11 +6,6 @@ export default function bindProxy(model: any) {
         return;
       }
 
-      // check for attributes
-      if ((instance as any)[name]) {
-        return (instance as any)[name];
-      }
-
       // check for properties
       if ((instance as any)[name]) {
         return (instance as any)[name];
@@ -19,7 +14,8 @@ export default function bindProxy(model: any) {
       // check injectables
       const injections = model.injectables.filter((item: any) => !!item[name]);
 
-      if (injections.length) {
+      // we only allow functions to be called, not retrieve data
+      if (injections.length && Object.prototype.toString.call((injections[0] as any)[name]) === '[object Function]') {
         return (injections[0] as any)[name];
       }
 
@@ -31,12 +27,6 @@ export default function bindProxy(model: any) {
     set: (instance: any, name: string | symbol, value: any) => {
       // ignore symbols
       if (typeof name === 'symbol') {
-        return true;
-      }
-
-      // check for self
-      if ((instance as any)[name]) {
-        (instance as any)[name] = value;
         return true;
       }
 
