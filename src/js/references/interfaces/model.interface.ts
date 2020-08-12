@@ -7,4 +7,7 @@ export default interface modelInterface<T = Object> {
 
   getFields: () => T;
   toJson: () => string;
+
+  // Injection support
+  [key: string]: any;
 };

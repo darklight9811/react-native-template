@@ -1,8 +1,8 @@
 // Components
 import ModelBase from './index';
-import buildAttributes from '../../utilities/buildAttributes';
-import buildProxy from '../../utilities/buildProxy';
-import buildModel from '../../utilities/buildModel';
+import buildAttributes from '../../utilities/build/Attributes';
+import buildProxy from '../../utilities/build/Proxy';
+import buildModel from '../../utilities/build/Model';
 
 describe("Base model tests", () => {
   // -------------------------------------------------
@@ -108,7 +108,7 @@ describe("Base model tests", () => {
     }
   
     // Create injection
-    Model.inject({test: function () { return 'true'; }});
+    Model.inject({test: function () { return 'true'; }, bind: (parent: any) => {}});
   
     // Proxy model
     const proxied = buildProxy(Model);

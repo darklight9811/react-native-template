@@ -14,6 +14,7 @@ export default {
   name: 'id',
   required: true,
   type: 'string',
+  primary: true,
   length: 11,
 
   // -------------------------------------------------

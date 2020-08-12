@@ -6,6 +6,7 @@ export default interface typeInterface {
   // the model table name
   name: string;
   type: string;
+  primary?: boolean;
   required?: boolean;
   length?: number;
   data?: Object;

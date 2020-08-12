@@ -1,5 +1,5 @@
 // Utilities
-import buildModel from '../references/utilities/buildModel';
+import buildModel from '../references/utilities/build/Model';
 
 // Models
 import user from './user';
