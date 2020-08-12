@@ -1,6 +1,6 @@
 import ModelBase from "../../abstractions/model.base";
 import Query from ".";
-import buildModel from "../../utilities/build/Model";
+import buildModel from "../../utilities/buildTypes/Model";
 
 describe('Test the query through a model', () => {
   // Start class

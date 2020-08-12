@@ -1,8 +1,8 @@
 // Components
 import ModelBase from './index';
-import buildAttributes from '../../utilities/build/Attributes';
-import buildProxy from '../../utilities/build/Proxy';
-import buildModel from '../../utilities/build/Model';
+import buildAttributes from '../../utilities/buildTypes/Attributes';
+import buildProxy from '../../utilities/buildTypes/Proxy';
+import buildModel from '../../utilities/buildTypes/Model';
 
 describe("Base model tests", () => {
   // -------------------------------------------------
