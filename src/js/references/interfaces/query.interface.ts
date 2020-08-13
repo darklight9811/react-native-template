@@ -4,6 +4,8 @@ export default interface queryInterface {
   // -------------------------------------------------
 
   where (arg1: any, arg2?: any, arg3?: any): any;
+  orWhere (arg1: any, arg2?: any, arg3?: any): any;
+  clear (): any;
 
   // -------------------------------------------------
   // Retrieve methods
